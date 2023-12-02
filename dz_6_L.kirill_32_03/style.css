@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: silver;
+    padding: 20px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.todo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 750px;
+    margin: 0 auto;
+
+}
+
+input {
+    display: flex;
+    border: 2px solid teal;
+    font-size: 20px;
+    height: 40px;
+    /* width: 100px; */
+    padding-left: 50px;
+    margin-left: 10px;
+}
+
+#create_button {
+    width: 240px;
+    height: 40px;
+    border: 2px solid teal;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.1);
+    font-size: 22px;
+}
+
+.todo_list {
+    margin: 0 auto;
+    width: 750px;
+}
+
+.block_text {
+    width: 100%;
+    border: 2px solid teal;
+    padding: 8px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h3 {
+    font-size: 28px;
+    font-family: "Cooper Black", sans-serif;
+}
+
+.div_button {
+    display: flex;
+    width: 320px;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.delete_button {
+    width: 150px;
+    height: 40px;
+    background-color: darkred;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.edit_button {
+    width: 150px;
+    height: 40px;
+    background-color: yellowgreen;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle {
+    text-decoration: line-through;
+}
+
+/* modal  */
+
+#modalEdit,
+.modal {
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.3s;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.contentEdit,
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 600px;
+}
+
+#close,
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#close:hover,
+#close:focus,
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modalInfo {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 10px;
+}
+
+.createEdit,
+.create {
+    border-radius: 4px;
+    background: #ffe743;
+    border: none;
+    height: 40px;
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.toggle {
+    text-decoration: line-through;
+}
